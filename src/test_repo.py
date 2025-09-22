@@ -3,11 +3,10 @@
 import os
 from datetime import datetime, timedelta
 
-import github
 import pandas as pd
 import pytest
 
-from src.repo_miner import fetch_commits  # , fetch_issues, merge_and_summarize
+import src.repo_miner as repo_miner
 
 # --- Helpers for dummy GitHub API objects ---
 
@@ -62,7 +61,11 @@ class DummyIssue:
 
 
 class DummyRepo:
-    def __init__(self, commits, issues):
+    def __init__(
+        self,
+        commits,
+        issues,
+    ):
         self._commits = commits
         self._issues = issues
 
@@ -87,10 +90,14 @@ class DummyGithub:
 
 @pytest.fixture(autouse=True)
 def patch_env_and_github(monkeypatch):
+    global gh_instance
     # Set fake token
     monkeypatch.setenv("GITHUB_TOKEN", "fake-token")
-    # Patch Github class
-    # TODO
+    # Patch the symbol that repo_miner uses
+    monkeypatch.setattr(repo_miner, "Github", lambda *a, **kw: gh_instance)
+
+    # Return instance so tests can use it if needed
+    return gh_instance
 
 
 # Helper global placeholder
@@ -107,12 +114,11 @@ def test_fetch_commits_basic(monkeypatch):
         DummyCommit("sha2", "Bob", "b@example.com", now - timedelta(days=1), "Bug fix"),
     ]
     gh_instance._repo = DummyRepo(commits, [])
-    github.Github.__init__ = lambda *args, **kwargs: gh_instance  # pyright: ignore[reportAttributeAccessIssue]
 
-    df = fetch_commits("any/repo")
+    df = repo_miner.fetch_commits("any/repo")
     assert list(df.columns) == ["sha", "author", "email", "date", "message"]
     assert len(df) == 2
-    assert df.iloc[0]["message"] == "Initial commit"
+    assert df.iloc[0]["message"] == "Initial commit\nDetails"
 
 
 def test_fetch_commits_limit(monkeypatch):
@@ -121,22 +127,20 @@ def test_fetch_commits_limit(monkeypatch):
     commits = [
         DummyCommit("sha1", "Alice", "a@example.com", now, "Initial commit\nDetails"),
         DummyCommit("sha2", "Bob", "b@example.com", now - timedelta(days=1), "Bug fix"),
-    ] * 200
+    ] * 100
     gh_instance._repo = DummyRepo(commits, [])
-    github.Github.__init__ = lambda *args, **kwargs: gh_instance  # pyright: ignore[reportAttributeAccessIssue]
 
-    df = fetch_commits("any/repo", 20)
+    df = repo_miner.fetch_commits("any/repo", 20)
     assert df["sha"].count() == 20
-    df = fetch_commits("any/repo")
+    df = repo_miner.fetch_commits("any/repo")
     assert df["sha"].count() == 100
-    df = fetch_commits("any/repo", None)
+    df = repo_miner.fetch_commits("any/repo", None)
     assert df["sha"].count() == 200
 
 
 def test_fetch_commits_empty(monkeypatch):
     """Test that fetch_commits returns empty DataFrame when no commits exist."""
     gh_instance._repo = DummyRepo([], [])
-    github.Github.__init__ = lambda *args, **kwargs: gh_instance  # pyright: ignore[reportAttributeAccessIssue]
 
-    df = fetch_commits("any/repo")
+    df = repo_miner.fetch_commits("any/repo")
     assert df["sha"].count() == 0

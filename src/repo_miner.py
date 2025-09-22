@@ -51,18 +51,18 @@ def _conv_commits_to_record(commits: list[Commit.Commit]) -> CommitRecords:
 
     def merge(raw_dict: CommitRecords, commit: Commit.Commit):
         raw_dict["sha"].append(commit.sha)
-        raw_dict["author"].append(commit.author.name)
-        raw_dict["email"].append(commit.author.email)
-        raw_dict["date (ISO-8601)"].append(commit.commit.committer.date.isoformat())
-        raw_dict["message (first line)"].append(commit.commit.message)
+        raw_dict["author"].append(commit.commit.author.name)
+        raw_dict["email"].append(commit.commit.author.email)
+        raw_dict["date"].append(commit.commit.author.date.isoformat())
+        raw_dict["message"].append(commit.commit.message)
         return raw_dict
 
     records: CommitRecords = {
         "sha": [],
         "author": [],
         "email": [],
-        "date (ISO-8601)": [],
-        "message (first line)": [],
+        "date": [],
+        "message": [],
     }
     return reduce(merge, commits, records)
 

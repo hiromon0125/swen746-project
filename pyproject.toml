@@ -9,4 +9,5 @@ dependencies = [
     "pandas>=2.3.2",
     "pygithub>=2.8.1",
     "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
 ]
