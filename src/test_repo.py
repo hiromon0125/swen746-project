@@ -3,6 +3,7 @@
 import os
 from datetime import datetime, timedelta
 
+import github
 import pandas as pd
 import pytest
 
@@ -106,6 +107,8 @@ def test_fetch_commits_basic(monkeypatch):
         DummyCommit("sha2", "Bob", "b@example.com", now - timedelta(days=1), "Bug fix"),
     ]
     gh_instance._repo = DummyRepo(commits, [])
+    github.Github.__init__ = lambda *args, **kwargs: gh_instance  # pyright: ignore[reportAttributeAccessIssue]
+
     df = fetch_commits("any/repo")
     assert list(df.columns) == ["sha", "author", "email", "date", "message"]
     assert len(df) == 2
@@ -120,6 +123,8 @@ def test_fetch_commits_limit(monkeypatch):
         DummyCommit("sha2", "Bob", "b@example.com", now - timedelta(days=1), "Bug fix"),
     ] * 200
     gh_instance._repo = DummyRepo(commits, [])
+    github.Github.__init__ = lambda *args, **kwargs: gh_instance  # pyright: ignore[reportAttributeAccessIssue]
+
     df = fetch_commits("any/repo", 20)
     assert df["sha"].count() == 20
     df = fetch_commits("any/repo")
@@ -131,5 +136,7 @@ def test_fetch_commits_limit(monkeypatch):
 def test_fetch_commits_empty(monkeypatch):
     """Test that fetch_commits returns empty DataFrame when no commits exist."""
     gh_instance._repo = DummyRepo([], [])
+    github.Github.__init__ = lambda *args, **kwargs: gh_instance  # pyright: ignore[reportAttributeAccessIssue]
+
     df = fetch_commits("any/repo")
     assert df["sha"].count() == 0
