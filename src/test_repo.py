@@ -1,9 +1,7 @@
 # tests/test_repo_miner.py
 
-import os
 from datetime import datetime, timedelta
 
-import pandas as pd
 import pytest
 
 import src.repo_miner as repo_miner
@@ -80,6 +78,8 @@ class DummyRepo:
 
 
 class DummyGithub:
+    _repo: DummyRepo
+
     def __init__(self, token):
         assert token == "fake-token"
 
@@ -133,7 +133,7 @@ def test_fetch_commits_limit(monkeypatch):
     df = repo_miner.fetch_commits("octocat/Hello-World", 20)
     assert df["sha"].count() == 20
     df = repo_miner.fetch_commits("octocat/Hello-World")
-    assert df["sha"].count() == 100
+    assert df["sha"].count() == 200
     df = repo_miner.fetch_commits("octocat/Hello-World", None)
     assert df["sha"].count() == 200
 

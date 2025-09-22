@@ -67,7 +67,7 @@ def _conv_commits_to_record(commits: list[Commit.Commit]) -> CommitRecords:
     return reduce(merge, commits, records)
 
 
-def fetch_commits(repo_name: str, max_commits: int | None = 100) -> pd.DataFrame:
+def fetch_commits(repo_name: str, max_commits: int | None = None) -> pd.DataFrame:
     """
     Fetch up to `max_commits` from the specified GitHub repository.
     Returns a DataFrame with columns: sha, author, email, date, message.
