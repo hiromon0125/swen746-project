@@ -115,7 +115,7 @@ def test_fetch_commits_basic(monkeypatch):
     ]
     gh_instance._repo = DummyRepo(commits, [])
 
-    df = repo_miner.fetch_commits("any/repo")
+    df = repo_miner.fetch_commits("octocat/Hello-World")
     assert list(df.columns) == ["sha", "author", "email", "date", "message"]
     assert len(df) == 2
     assert df.iloc[0]["message"] == "Initial commit\nDetails"
@@ -130,11 +130,11 @@ def test_fetch_commits_limit(monkeypatch):
     ] * 100
     gh_instance._repo = DummyRepo(commits, [])
 
-    df = repo_miner.fetch_commits("any/repo", 20)
+    df = repo_miner.fetch_commits("octocat/Hello-World", 20)
     assert df["sha"].count() == 20
-    df = repo_miner.fetch_commits("any/repo")
+    df = repo_miner.fetch_commits("octocat/Hello-World")
     assert df["sha"].count() == 100
-    df = repo_miner.fetch_commits("any/repo", None)
+    df = repo_miner.fetch_commits("octocat/Hello-World", None)
     assert df["sha"].count() == 200
 
 
@@ -142,5 +142,5 @@ def test_fetch_commits_empty(monkeypatch):
     """Test that fetch_commits returns empty DataFrame when no commits exist."""
     gh_instance._repo = DummyRepo([], [])
 
-    df = repo_miner.fetch_commits("any/repo")
+    df = repo_miner.fetch_commits("octocat/Hello-World")
     assert df["sha"].count() == 0
