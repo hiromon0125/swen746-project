@@ -20,4 +20,4 @@ A command-line tool to:
     1) Fetch and normalize commit data from GitHub
 
 Sub-commands:
-    - fetch_commits --repo [repo_name] --out [path_to_csv] --max [optional:number_of_commits]
+    - fetch-commits --repo [repo_name] --out [path_to_csv] --max [optional:number_of_commits]

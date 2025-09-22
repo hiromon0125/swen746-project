@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
 """
 repo_miner.py
 
@@ -6,7 +6,7 @@ A command-line tool to:
     1) Fetch and normalize commit data from GitHub
 
 Sub-commands:
-    - fetch_commits
+    - fetch-commits
 """
 
 import argparse
@@ -14,11 +14,8 @@ import os
 from functools import reduce
 
 import pandas as pd
-from dotenv import load_dotenv
+from dotenv import find_dotenv, load_dotenv
 from github import Auth, Commit, Github
-
-load_dotenv(os.path.join("..", ".env"))
-print(os.environ.get("TEST_LOADED") or "Environment NOT LOADED!")
 
 type CommitRecords = dict[str, list]
 
@@ -122,4 +119,8 @@ def main():
 
 
 if __name__ == "__main__":
+    load_dotenv(find_dotenv())
+    print(os.environ.get("TEST_LOADED", "Environment NOT LOADED!"))
+    if os.environ.get("TEST_LOADED") is None:
+        raise KeyError("Environment NOT LOADED!")
     main()
