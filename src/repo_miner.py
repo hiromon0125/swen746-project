@@ -120,7 +120,6 @@ def main():
 
 if __name__ == "__main__":
     load_dotenv(find_dotenv())
-    print(os.environ.get("TEST_LOADED", "Environment NOT LOADED!"))
     if os.environ.get("TEST_LOADED") is None:
         raise KeyError("Environment NOT LOADED!")
     main()
