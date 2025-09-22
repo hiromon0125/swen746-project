@@ -73,10 +73,10 @@ def fetch_commits(repo_name: str, max_commits: int | None = 100) -> pd.DataFrame
     Returns a DataFrame with columns: sha, author, email, date, message.
     """
     # 1) Read GitHub token from environment
-    ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
+    ACCESS_TOKEN = os.environ.get("GITHUB_TOKEN")
     if ACCESS_TOKEN is None:
         raise KeyError(
-            "ACCESS_TOKEN was not found. Make sure the environment file is properly loaded."
+            "GITHUB_TOKEN was not found. Make sure the environment file is properly loaded."
         )
     auth = Auth.Token(ACCESS_TOKEN)
 
