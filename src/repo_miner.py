@@ -13,7 +13,6 @@ Sub-commands:
 
 import argparse
 import os
-from datetime import datetime
 from functools import reduce
 
 import pandas as pd
@@ -68,7 +67,9 @@ def _conv_commits_to_record(commits: list[Commit.Commit]) -> CommitRecords:
     return reduce(merge, commits, records)
 
 
-def _get_issues_from_repo(github: Github, repo_name: str, state: str, max_issues: int | None):
+def _get_issues_from_repo(
+    github: Github, repo_name: str, state: str, max_issues: int | None
+):
     """Converts iterator to lists to prefetch all lists
 
     Args:
@@ -95,29 +96,27 @@ def _conv_issues_to_record(issues: list[Issue.Issue]) -> IssueRecords:
     Returns: IssueRecords dictionary of list as attribute values
     """
 
-    def merge(raw_dict: IssueRecords, issue: Issue.Issue):
+    def merge(raw_dict: IssueRecords, issue: Issue.Issue) -> IssueRecords:
         # Skip pull requests (they have a pull_request attribute)
-        if hasattr(issue, 'pull_request') and issue.pull_request is not None:
+        if hasattr(issue, "pull_request") and issue.pull_request is not None:
             return raw_dict
-            
+
         # Calculate open_duration_days
         open_duration_days = None
         if issue.closed_at is not None:
             created = issue.created_at
             closed = issue.closed_at
-            if isinstance(created, str):
-                created = datetime.fromisoformat(created.replace('Z', '+00:00'))
-            if isinstance(closed, str):
-                closed = datetime.fromisoformat(closed.replace('Z', '+00:00'))
             open_duration_days = (closed - created).days
-        
+
         raw_dict["id"].append(issue.id)
         raw_dict["number"].append(issue.number)
         raw_dict["title"].append(issue.title)
         raw_dict["user"].append(issue.user.login)
         raw_dict["state"].append(issue.state)
         raw_dict["created_at"].append(issue.created_at.isoformat())
-        raw_dict["closed_at"].append(issue.closed_at.isoformat() if issue.closed_at else None)
+        raw_dict["closed_at"].append(
+            issue.closed_at.isoformat() if issue.closed_at else None
+        )
         raw_dict["comments"].append(issue.comments)
         raw_dict["open_duration_days"].append(open_duration_days)
         return raw_dict
@@ -164,7 +163,9 @@ def fetch_commits(repo_name: str, max_commits: int | None = None) -> pd.DataFram
     return pd.DataFrame(records)
 
 
-def fetch_issues(repo_full_name: str, state: str = "all", max_issues: int = None) -> pd.DataFrame:
+def fetch_issues(
+    repo_full_name: str, state: str = "all", max_issues: int | None = None
+) -> pd.DataFrame:
     """
     Fetch up to `max_issues` from the specified GitHub repository.
     Returns a DataFrame with columns: id, number, title, user, state, created_at, closed_at, comments, open_duration_days.
@@ -193,7 +194,86 @@ def fetch_issues(repo_full_name: str, state: str = "all", max_issues: int = None
     return pd.DataFrame(records)
 
 
-def main():
+def csv_to_df(path: str):
+    """Takes a path to csv and converts to pd.df"""
+    if not isinstance(path, str) or path.strip() == "":
+        raise ValueError("`path` must be a non-empty string pointing to a CSV file")
+    if not os.path.isabs(path):
+        path = os.path.abspath(path)
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"CSV file not found: {path}")
+    return pd.read_csv(path)
+
+
+def merge_and_summarize(commits_df, issues_df):
+    """
+    Takes two DataFrames (commits and issues) and prints:
+        - Top 5 committers by commit count
+        - Issue close rate (closed/total)
+        - Average open duration for closed issues (in days)
+    """
+    # Copy to avoid modifying original data
+    commits = commits_df.copy()
+    issues = issues_df.copy()
+
+    # 1) Normalize date/time columns to pandas datetime
+    commits["date"] = pd.to_datetime(commits["date"], errors="coerce")
+    issues["created_at"] = pd.to_datetime(issues["created_at"], errors="coerce")
+    issues["closed_at"] = pd.to_datetime(issues["closed_at"], errors="coerce")
+
+    # 2) Top 5 committers
+    top_committers = (
+        commits["author"].fillna("<unknown>").value_counts().head(5).to_dict()
+    )
+
+    # 3) Calculate issue close rate
+    total_issues = len(issues)
+    closed_issues = int((issues["state"].fillna("") == "closed").sum())
+    close_rate = None
+    if total_issues > 0:
+        close_rate = closed_issues / total_issues
+
+    # 4) Compute average open duration (days) for closed issues
+    avg_open_days = None
+    if "open_duration_days" in issues.columns:
+        odays = pd.to_numeric(issues["open_duration_days"], errors="coerce")
+        avg_open_days = (
+            float(odays.dropna().mean()) if not odays.dropna().empty else None
+        )
+    else:
+        closed_mask = issues["closed_at"].notna() & issues["created_at"].notna()
+        if closed_mask.any():
+            durations = (
+                issues.loc[closed_mask, "closed_at"]
+                - issues.loc[closed_mask, "created_at"]
+            ).dt.days
+            avg_open_days = float(durations.mean())
+
+    # Print summary to stdout
+    print("Top 5 committers:")
+    for author, count in top_committers.items():
+        print(f"{author}: {count} commits")
+
+    if close_rate is None:
+        print("No issues to compute close rate.")
+    else:
+        print(f"Issue close rate: {close_rate:.2%} ({closed_issues}/{total_issues})")
+
+    if avg_open_days is None:
+        print("No closed issues to compute average open duration.")
+    else:
+        print(f"Avg. issue open duration: {avg_open_days:.2f}")
+
+    return {
+        "top_committers": top_committers,
+        "total_issues": total_issues,
+        "closed_issues": closed_issues,
+        "close_rate": close_rate,
+        "avg_open_days": avg_open_days,
+    }
+
+
+def main() -> None:
     """
     Parse command-line arguments and dispatch to sub-commands.
     """
@@ -214,15 +294,20 @@ def main():
     c2 = subparsers.add_parser("fetch-issues", help="Fetch issues and save to CSV")
     c2.add_argument("--repo", required=True, help="Repository in owner/repo format")
     c2.add_argument(
-        "--state", 
-        choices=["all", "open", "closed"], 
-        default="all", 
-        help="State of issues to fetch (default: all)"
+        "--state",
+        choices=["all", "open", "closed"],
+        default="all",
+        help="State of issues to fetch (default: all)",
     )
     c2.add_argument(
         "--max", type=int, dest="max_issues", help="Max number of issues to fetch"
     )
     c2.add_argument("--out", required=True, help="Path to output issues CSV")
+
+    # Sub-command: summarize
+    c3 = subparsers.add_parser("summarize", help="Summarizes github repo")
+    c3.add_argument("--commits", required=True, help="Path to commit list file(csv)")
+    c3.add_argument("--issues", required=True, help="Path to issues list file(csv)")
 
     args = parser.parse_args()
 
@@ -235,6 +320,9 @@ def main():
         df = fetch_issues(args.repo, args.state, args.max_issues)
         df.to_csv(args.out, index=False)
         print(f"Saved {len(df)} issues to {args.out}")
+    elif args.command == "summarize":
+        commits_df, issues_df = csv_to_df(args.commits), csv_to_df(args.issues)
+        merge_and_summarize(commits_df, issues_df)
 
 
 if __name__ == "__main__":

@@ -149,18 +149,49 @@ def test_fetch_commits_empty(monkeypatch):
 
 # --- Tests for fetch_issues ---
 
+
 def test_fetch_issues_excludes_prs(monkeypatch):
     """Test that fetch_issues excludes pull requests."""
     now = datetime.now()
     issues = [
         DummyIssue(1, 1, "Bug report", "alice", "open", now, None, 0, is_pr=False),
-        DummyIssue(2, 2, "Feature request", "bob", "closed", now - timedelta(days=1), now, 3, is_pr=True),
-        DummyIssue(3, 3, "Another bug", "charlie", "open", now - timedelta(days=2), None, 1, is_pr=False),
+        DummyIssue(
+            2,
+            2,
+            "Feature request",
+            "bob",
+            "closed",
+            now - timedelta(days=1),
+            now,
+            3,
+            is_pr=True,
+        ),
+        DummyIssue(
+            3,
+            3,
+            "Another bug",
+            "charlie",
+            "open",
+            now - timedelta(days=2),
+            None,
+            1,
+            is_pr=False,
+        ),
     ]
     gh_instance._repo = DummyRepo([], issues)
 
     df = repo_miner.fetch_issues("octocat/Hello-World")
-    assert list(df.columns) == ["id", "number", "title", "user", "state", "created_at", "closed_at", "comments", "open_duration_days"]
+    assert list(df.columns) == [
+        "id",
+        "number",
+        "title",
+        "user",
+        "state",
+        "created_at",
+        "closed_at",
+        "comments",
+        "open_duration_days",
+    ]
     assert len(df) == 2  # Only 2 issues, PR excluded
     assert df["number"].tolist() == [1, 3]  # PR with number 2 should be excluded
 
@@ -170,28 +201,30 @@ def test_fetch_issues_date_normalization(monkeypatch):
     now = datetime.now()
     created_at = now - timedelta(days=5)
     closed_at = now - timedelta(days=1)
-    
+
     issues = [
-        DummyIssue(1, 1, "Test issue", "alice", "closed", created_at, closed_at, 0, is_pr=False),
+        DummyIssue(
+            1, 1, "Test issue", "alice", "closed", created_at, closed_at, 0, is_pr=False
+        ),
     ]
     gh_instance._repo = DummyRepo([], issues)
 
     df = repo_miner.fetch_issues("octocat/Hello-World")
     assert len(df) == 1
-    
+
     # Check that dates are ISO-8601 format
     created_iso = df.iloc[0]["created_at"]
     closed_iso = df.iloc[0]["closed_at"]
-    
+
     # Should be ISO format strings
     assert isinstance(created_iso, str)
     assert isinstance(closed_iso, str)
     assert "T" in created_iso  # ISO format includes T
     assert "T" in closed_iso
-    
+
     # Should be able to parse back to datetime
-    parsed_created = datetime.fromisoformat(created_iso.replace('Z', '+00:00'))
-    parsed_closed = datetime.fromisoformat(closed_iso.replace('Z', '+00:00'))
+    parsed_created = datetime.fromisoformat(created_iso.replace("Z", "+00:00"))
+    parsed_closed = datetime.fromisoformat(closed_iso.replace("Z", "+00:00"))
     assert isinstance(parsed_created, datetime)
     assert isinstance(parsed_closed, datetime)
 
@@ -201,22 +234,86 @@ def test_fetch_issues_open_duration_calculation(monkeypatch):
     now = datetime.now()
     created_at = now - timedelta(days=10)
     closed_at = now - timedelta(days=3)
-    
+
     issues = [
-        DummyIssue(1, 1, "Closed issue", "alice", "closed", created_at, closed_at, 0, is_pr=False),
-        DummyIssue(2, 2, "Open issue", "bob", "open", now - timedelta(days=5), None, 0, is_pr=False),
+        DummyIssue(
+            1,
+            1,
+            "Closed issue",
+            "alice",
+            "closed",
+            created_at,
+            closed_at,
+            0,
+            is_pr=False,
+        ),
+        DummyIssue(
+            2,
+            2,
+            "Open issue",
+            "bob",
+            "open",
+            now - timedelta(days=5),
+            None,
+            0,
+            is_pr=False,
+        ),
     ]
     gh_instance._repo = DummyRepo([], issues)
 
     df = repo_miner.fetch_issues("octocat/Hello-World")
     assert len(df) == 2
-    
+
     # Check open_duration_days calculation
     closed_issue = df[df["state"] == "closed"].iloc[0]
     open_issue = df[df["state"] == "open"].iloc[0]
-    
+
     # Closed issue should have 7 days duration (10 - 3 = 7)
     assert closed_issue["open_duration_days"] == 7
-    
+
     # Open issue should have None duration
     assert pd.isna(open_issue["open_duration_days"])
+
+
+def test_merge_and_summarize_output(capsys):
+    # Prepare test DataFrames
+    df_commits = pd.DataFrame(
+        {
+            "sha": ["a", "b", "c", "d"],
+            "author": ["X", "Y", "X", "Z"],
+            "email": ["x@e", "y@e", "x@e", "z@e"],
+            "date": [
+                "2025-01-01T00:00:00",
+                "2025-01-01T01:00:00",
+                "2025-01-02T00:00:00",
+                "2025-01-02T01:00:00",
+            ],
+            "message": ["m1", "m2", "m3", "m4"],
+        }
+    )
+    df_issues = pd.DataFrame(
+        {
+            "id": [1, 2, 3],
+            "number": [101, 102, 103],
+            "title": ["I1", "I2", "I3"],
+            "user": ["u1", "u2", "u3"],
+            "state": ["closed", "open", "closed"],
+            "created_at": [
+                "2025-01-01T00:00:00",
+                "2025-01-01T02:00:00",
+                "2025-01-02T00:00:00",
+            ],
+            "closed_at": ["2025-01-01T12:00:00", None, "2025-01-02T12:00:00"],
+            "comments": [0, 1, 2],
+        }
+    )
+    # Run summarize
+    repo_miner.merge_and_summarize(df_commits, df_issues)
+    captured = capsys.readouterr().out
+    # Check top committer
+    assert "Top 5 committers" in captured
+    assert "X: 2 commits" in captured
+    # Check close rate
+    assert "Issue close rate: 66.67" in captured
+    # Check avg open duration
+    assert "Avg. issue open duration:" in captured

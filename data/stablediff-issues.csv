@@ -1,0 +1,114 @@
+id,number,title,user,state,created_at,closed_at,comments,open_duration_days
+3509285822,17146,[Bug]: Doesn't run in newer python versions (ex. python v3.13.5.),Rein-42,open,2025-10-13T09:55:01+00:00,,0,
+3492989620,17141,Stable Diffusion,surasakrockon-max,closed,2025-10-07T20:49:07+00:00,2025-10-07T22:45:24+00:00,0,0.0
+3485366209,17137,[Bug]: dev branch: uv not work properly on linux,silvertuanzi,closed,2025-10-06T00:58:51+00:00,2025-10-07T20:08:32+00:00,4,1.0
+3414846730,17126,[Bug]: SDXL Models Fail After WebUI Restart Due to VAE Error Recovery Not Persisting,mlworks90,open,2025-09-14T10:04:34+00:00,,0,
+3391213316,17122,[Feature Request]: Multi full prompt batch automation in series,colin-heberling,open,2025-09-07T05:10:02+00:00,,1,
+3373589228,17119,[Bug]: Runtime error,Marshy111,open,2025-09-01T19:17:23+00:00,,0,
+3362492388,17117,[Bug]: win10安装卡在Installing requirements没反应,Qiqi-Cici,open,2025-08-28T09:07:26+00:00,,2,
+3356689298,17112,# Update 20250501,cjhScotland,open,2025-08-26T18:26:47+00:00,,2,
+3353260645,17111,[Bug]:  Any error happening after 'commit hash : XXXX' is not related to the launcher,elsepulin,open,2025-08-25T21:26:13+00:00,,0,
+3349417013,17110,[Feature Request]: multi-threaded execution with --use-cpu all,mabuware,closed,2025-08-24T11:07:52+00:00,2025-08-24T12:03:38+00:00,0,0.0
+3335569971,17102,[Bug]: Missing xformers (on linux at least),TeKett,open,2025-08-19T20:17:38+00:00,,1,
+3328661729,17100,[Feature Request]: Store generation metadata in image metadata or text file,Universumgames,closed,2025-08-17T20:57:26+00:00,2025-08-18T14:03:46+00:00,2,0.0
+3287170559,17081,[Bug]:,superdonz-crypto,open,2025-08-03T13:19:57+00:00,,1,
+3285669116,17080,[Feature Request]: Update the tools PyTorch & Cuda to support the RTX5000-series.,TVARecordings,closed,2025-08-02T06:46:49+00:00,2025-08-07T18:51:40+00:00,1,5.0
+3261093795,17067,[Bug]: Issue Running V-Pred Model on A1111 Dev Branch: Black Output After Fixing NaNs Error,xura-xa,open,2025-07-24T20:03:32+00:00,,2,
+3255455204,17064,[Bug]: AttributeError: 'NoneType' object has no attribute 'get',war-nightmare,open,2025-07-23T08:32:52+00:00,,0,
+3254408254,17063,[Bug]: ModuleNotFoundError: No module named 'numpy.exceptions',Limmweb,open,2025-07-23T00:09:12+00:00,,4,
+3230781669,17062,[Feature Request]: AVIF Lossless Support,Rabcor,open,2025-07-15T05:03:40+00:00,,2,
+3227822397,17061,[Bug]: AttributeError: 'BertLMHeadModel' object has no attribute 'generate',hanasay,open,2025-07-14T08:18:13+00:00,,1,
+3226044477,17060,[Bug]: SDXL Hires. fix Fails with OOM (Out Of Memory) on Intel Arc (DirectML),RUTO1920,open,2025-07-13T02:48:38+00:00,,0,
+3225979887,17059,VULNERABILITY URGENT,mikozdravkovski,closed,2025-07-13T00:51:40+00:00,2025-07-13T22:49:57+00:00,3,0.0
+3223547920,17058,[Bug]: Traceback (most recent call last): error code,Lights0103,closed,2025-07-11T16:38:05+00:00,2025-07-13T00:30:54+00:00,0,1.0
+3217551962,17057,"[Bug]: Lora page freezes, even with justa  few loras in Lora folder",itsdeadfrosty,open,2025-07-10T01:09:35+00:00,,0,
+3214439238,17056,[Bug]: Fails to self-correct after failing to create Python venv,Mechputer,open,2025-07-09T04:21:15+00:00,,1,
+3212552534,17055,[Bug]: Issue with Numpy when starting webui,HiroYuan-DAICHIGP,closed,2025-07-08T13:23:34+00:00,2025-07-10T01:51:48+00:00,24,1.0
+3212537226,17054,[Bug]: AttributeError: 'ImageDraw' object has no attribute 'multiline_textsize',MSCAs,open,2025-07-08T13:19:09+00:00,,2,
+3204700998,17051,[Bug]: ImportError: libamdhip64.so: cannot enable executable stack as shared object requires: Invalid argument,bestbug456,open,2025-07-05T10:12:28+00:00,,3,
+3184608865,17047,"[Bug]: Intel Arc GPU (XPU) not detected with PyTorch builds integrating XPU support (e.g., 2.7.1+XPU)",DrThodt2021,open,2025-06-28T05:35:58+00:00,,10,
+3184223933,17046,[Bug]: error code 128,emai24volts,open,2025-06-27T22:33:06+00:00,,1,
+3169973845,17041,[Bug]: Cannot do inpainting,Rabcor,open,2025-06-24T02:04:40+00:00,,2,
+3161680096,17038,[Bug]:What when I have no nvidia GPU?,KajtekRut,closed,2025-06-20T01:45:20+00:00,2025-06-20T09:53:03+00:00,1,0.0
+3160547755,17037,[Bug]: 图像缩放后位置出错,SUN-myriad,open,2025-06-19T14:29:39+00:00,,0,
+3155273817,17035,[Bug]: images corrupting on last step with euler / euler a,lands39,open,2025-06-18T02:41:01+00:00,,4,
+3144181544,17032,[Bug]: Firewall issue causes SSLError when attempting to generate,Krmailence,open,2025-06-13T17:00:59+00:00,,0,
+3141429531,17031,[Bug]: Error 403 trying to install pytorch,Ciberbago,open,2025-06-12T20:03:12+00:00,,4,
+3139057850,17030,[Bug]: handrefinerportable: cannot import 'setuptools.build_meta' on ControlNet install,svnsnln,open,2025-06-12T06:51:25+00:00,,0,
+3137679571,17029,[Bug]: in hires. fix infinity loading,ostryzhnyi,open,2025-06-11T17:59:32+00:00,,1,
+3127410665,17025,[Bug]: automatic install for AMD with ROCm throws CUDA error.,RalkeyOfficial,open,2025-06-07T19:24:16+00:00,,6,
+3112841248,17024,webui.sh报错，有没有适合中国宝宝体质的安装方式和运行方式,XuJianzhi,open,2025-06-03T07:43:39+00:00,,3,
+3107827458,17023,[Bug]: Could not load model 'time_embed.0.weight',kombattriarii,closed,2025-06-01T20:45:14+00:00,2025-06-02T17:36:02+00:00,1,0.0
+3105277892,17015,"[Feature Request]: Точка входа. Только для того, кто слышит тишину.",SIMA1SIMA,closed,2025-05-31T10:26:33+00:00,2025-05-31T19:09:42+00:00,2,0.0
+3104290479,17014,[Bug]:,BlueScreenTT,open,2025-05-30T21:11:57+00:00,,1,
+3098733165,17013,[Feature Request]: Native Regional Prompting Support in txt2img/img2img UI (Like Regional Prompter Extension),lovenderdeleon,open,2025-05-28T22:55:54+00:00,,0,
+3091297315,17010,[Bug]: IPEX - Native API Error -997 (Command Failed to Enqueue/Execute),Parvezkhan0,open,2025-05-26T13:51:46+00:00,,1,
+3090789669,17009,[Bug]: `history.json is not created/written to in v1.10.1 despite successful image generation`,tovytovy,open,2025-05-26T10:51:30+00:00,,3,
+3090689736,17008,[Bug]:    Interface:/sdapi/v1/sd-models not found,lizhao-8202,closed,2025-05-26T10:14:30+00:00,2025-05-27T07:16:06+00:00,2,0.0
+3082132420,17002,"[Bug]: webui.sh start failed on macos, ValueError: When localhost is not accessible, a shareable link must be created.",waitpigfly,open,2025-05-22T05:48:32+00:00,,1,
+3071846355,16997,[Bug]: Argument interpolation should be a InterpolationMode or a corresponding Pillow integer constant,wzgrx,open,2025-05-18T14:57:32+00:00,,1,
+3065726120,16992,[Bug]: SDXL model outputs end up with weird spikey artifacts,goatman55,closed,2025-05-15T10:16:52+00:00,2025-05-18T03:23:07+00:00,1,2.0
+3064392168,16991,Trouble launching webui,XxpintelxX,open,2025-05-14T22:17:59+00:00,,0,
+3055913292,16990,[Bug]: SD was running fast and slowed down a lot,bzelenkov,open,2025-05-12T07:22:56+00:00,,2,
+3050022292,16988,[Feature Request]: --no-git-pull start argument,R3veng3R,closed,2025-05-08T20:27:29+00:00,2025-05-10T13:32:21+00:00,3,1.0
+3047033217,16986,"[Bug]: WebUI won't start (fresh copy, macOS on Apple Silicon)",Sebastian1989101,open,2025-05-07T19:58:45+00:00,,2,
+3036279864,16980,[Bug]: Some Lora models not showing,formula80,closed,2025-05-02T15:22:23+00:00,2025-05-18T09:11:14+00:00,10,15.0
+3029867757,16974,[Bug]: Help installation stable diffusion en linux Ubuntu/PopOS with rtx 5070,Arion107,open,2025-04-30T01:16:48+00:00,,2,
+3029095059,16973,[Bug]: I cant create any images,Nowman2,open,2025-04-29T17:48:52+00:00,,3,
+3027117537,16971,[Bug]: zluda resolution bug,Neko21421,open,2025-04-29T05:44:05+00:00,,0,
+3024716065,16968,[Feature Request]: To make the mask black,spawner1145,closed,2025-04-28T12:03:38+00:00,2025-05-11T00:53:29+00:00,0,12.0
+3023291172,16965,[Bug]: Better Tutorials for Running with AMD,shinra358,open,2025-04-27T19:57:49+00:00,,1,
+3023170650,16964,[Bug]: module 'tensorflow' has no attribute 'Tensor' (ComfyUI),matt02musc,closed,2025-04-27T16:00:41+00:00,2025-04-27T23:15:49+00:00,2,0.0
+3022152362,16961,"[Bug]: Does not store ""Use old karras scheduler sigmas (0.1 to 10)."" in metadata",ShardM,open,2025-04-26T17:26:31+00:00,,0,
+3021884105,16960,"[Bug]: checkpoint merger missing ""none"" option",johnjacquier,open,2025-04-26T13:43:16+00:00,,0,
+3017808635,16958,[Feature Request]: Toggle to disable editing generation settings,pxnk,open,2025-04-24T16:26:09+00:00,,2,
+3017754771,16957,[Feature Request]: Docker compose example,SuperPat45,open,2025-04-24T16:03:49+00:00,,1,
+3012411189,16955,[Bug]: Inpaint and page zoom causes image to dissapear,palentir,open,2025-04-23T00:34:52+00:00,,1,
+3011441785,16954,[Bug]: ROCm version turns stupid (super low quality as if skipping steps),ghost,open,2025-04-22T15:33:21+00:00,,1,
+2998433298,16950,[Bug]: ValueError: `state_dict` cannot be passed together with a model name or a `gguf_file`,farizy4n,open,2025-04-16T05:28:46+00:00,,1,
+2991516331,16946,[Feature Request]: image size settings presets,ajayeola,open,2025-04-13T22:13:51+00:00,,2,
+2990684842,16945,[Feature Request]: Architecture change support,LoksliSpb,open,2025-04-12T19:36:58+00:00,,0,
+2987741401,16942,VAE,smy123666,open,2025-04-11T06:53:58+00:00,,0,
+2986684381,16941,[Bug]: Torch is not able to use GPU,Sirfluffykinz,open,2025-04-10T19:32:26+00:00,,1,
+2983617474,16939,[Feature Request]: Allow DBclient Connection Port Override for UserLAnd Compatibility,yuuki-0723,open,2025-04-09T18:48:00+00:00,,2,
+2976932701,16938,[Bug]: Python version is too recent,loloof64,open,2025-04-07T13:45:23+00:00,,6,
+2964404388,16930,[Bug]: Extensions list (lora list sometimes) not properly showing,DHow2,open,2025-04-01T19:34:14+00:00,,0,
+2954721996,16924,[Feature Request]: EXTRA_INDEX_URL env var for pip,AR2000AR,open,2025-03-28T00:28:01+00:00,,0,
+2951425774,16921,"[Bug]: No module 'xformers'; and it always fails to download, the problems of pip? (on Mac Silicon)",AuroraMackenzie,closed,2025-03-27T03:54:35+00:00,2025-04-05T16:21:20+00:00,4,9.0
+2944286336,16917,[Bug]: FINISH ISSUE,krisz2333,open,2025-03-24T19:41:09+00:00,,1,
+2940444511,16912,[Feature Request]: about  webui-user.bat,KaiXin1977,open,2025-03-22T15:15:59+00:00,,2,
+2939375914,16910,Someone is impersonating AUTOMATIC1111 for crypto,w-e-w,open,2025-03-21T19:57:32+00:00,,0,
+2937497545,16908,[Bug]: Someone use your project luanching a token. Is it yourself?,Jessiebase,open,2025-03-21T06:59:47+00:00,,1,
+2934215752,16907,[Feature Request]: Newer version of Python,siakc,open,2025-03-20T06:11:52+00:00,,2,
+2930353525,16902,[Bug]: Unable to install older versions of SD,JingJang,open,2025-03-19T03:34:46+00:00,,0,
+2930199164,16901,[Feature Request]: Random Num Generator Filename pattern,JingJang,closed,2025-03-19T01:34:46+00:00,2025-05-02T17:02:12+00:00,0,44.0
+2922759884,16896,"same issue, fixed?",jeremt001,open,2025-03-16T04:20:54+00:00,,2,
+2920727339,16891,[Bug]:,Sensanko52123,open,2025-03-14T16:33:29+00:00,,2,
+2914926997,16890,[Bug]: Could not find a version that satisfies the requirement torch==2.0.0a0 on --use-ipex,picarica,open,2025-03-12T19:11:46+00:00,,5,
+2904596088,16884,[Bug]: UserWarning: NVIDIA GeForce RTX 5070 Ti with CUDA capability sm_120 is not compatible with the current PyTorch installation. The current PyTorch install supports CUDA capabilities sm_50 sm_60 sm_61 sm_70 sm_75 sm_80 sm_86 sm_90.,fireYtail,closed,2025-03-08T07:00:15+00:00,2025-03-22T00:51:42+00:00,23,13.0
+2904576188,16883,[Bug]: SD 2.1 not working: NansException: A tensor with NaNs was produced in Unet.,fireYtail,open,2025-03-08T06:25:05+00:00,,1,
+2904464261,16882,"[Bug]: Stable Diffusion WebUI Startup Error: Insufficient Memory, Unable to Install Torch",jeremt001,open,2025-03-08T04:19:41+00:00,,2,
+2899427951,16881,[Bug]: Failed to install requirements,Kylada,open,2025-03-06T05:55:42+00:00,,2,
+2895958807,16879,[Bug]: Error code:1 Could't install torch,kazumaduy,open,2025-03-05T02:33:29+00:00,,1,
+2891596221,16878,solved ,Sensanko52123,closed,2025-03-03T15:38:47+00:00,2025-03-04T01:22:01+00:00,2,0.0
+2889444132,16876,[Bug]: function parse_generation_parameter removes lastline if multiple loras are embedded in final text,thundaga,open,2025-03-02T09:50:19+00:00,,6,
+2889017260,16874,[Feature Request]: fp16 accumulation,namemechan,open,2025-03-01T16:42:29+00:00,,0,
+2888629589,16871,[Feature Request]: Add warning when extensions cannot be installed to Extensions > Available tab,tomasohara,open,2025-03-01T06:05:28+00:00,,0,
+2887662916,16870,[Bug]: Token merging ratio setting seems to do nothing,MIC132,closed,2025-02-28T17:03:51+00:00,2025-02-28T18:02:00+00:00,3,0.0
+2881698869,16868,[Bug]: loading stable diffusion model: UnpicklingError,Yeeeeeee123,open,2025-02-26T13:54:45+00:00,,8,
+2874779100,16863,[Bug]: torch cuda error,DotPoker2,closed,2025-02-24T12:17:12+00:00,2025-02-24T22:54:03+00:00,2,0.0
+2872943289,16861,[Bug]: Torch is not able to use GPU; add --skip-torch-cuda-test to COMMANDLINE_ARGS variable to disable this check,jabcreations,open,2025-02-23T05:33:01+00:00,,6,
+2870887128,16860,"[Bug]: When setting the LORA directory to a network storage device, the tree view disappears",carey6409,closed,2025-02-22T15:35:46+00:00,2025-02-23T15:31:38+00:00,5,0.0
+2869821934,16859,[Bug]: Error code: 128,PavelVLasovich,open,2025-02-21T19:15:27+00:00,,1,
+2869579028,16858,[Feature Request]: AI Assistant for Prompt Optimization in A1111,4MagicLight4,open,2025-02-21T17:06:08+00:00,,0,
+2864638396,16856,"[Bug]:sqlite3.OperationalError: no such column: ""size"" - should this be a string literal in single-quotes?",waylonwang,open,2025-02-19T23:51:15+00:00,,23,
+2861621254,16854,[Bug]: Inpainting Mask does not support alpha-white pixels (over API),peterpernhofer,open,2025-02-18T20:59:56+00:00,,0,
+2859904100,16850,[Bug]:,StreamHubHub,open,2025-02-18T09:58:06+00:00,,1,
+2858768270,16849,[Feature Request]: CMP 50HX support,carbofos,closed,2025-02-17T20:52:21+00:00,2025-02-18T14:05:37+00:00,3,0.0
+2856662436,16848,spam,RobinYang11,closed,2025-02-17T03:50:01+00:00,2025-02-17T12:37:42+00:00,1,0.0
+2856123753,16847,[Bug]: ERROR: Could not find a version that satisfies the requirement torch==2.3.1 (from versions: 2.6.0),lukecp5,open,2025-02-16T14:09:28+00:00,,1,
+2854904273,16843,[Bug]: stable diffusion not using gpu,Aivoice96,open,2025-02-14T23:45:26+00:00,,9,
+2841503456,16838,Attajirii,Attahjirii,closed,2025-02-10T06:50:53+00:00,2025-02-10T06:52:24+00:00,0,0.0
+2840387200,16836,[Release Request]: v1.10.1 release to match tags,238SAMIxD,closed,2025-02-09T02:24:33+00:00,2025-02-09T08:01:16+00:00,1,0.0
+2837727895,16828,[Bug]:Server execution error: 'charmap' codec can't encode character '\u2192' in position 8: character maps to <undefined>,johnj-2224,closed,2025-02-07T09:54:49+00:00,2025-02-07T13:01:33+00:00,1,0.0
+2832539315,16826,ComfyUI交流群,iveskim,closed,2025-02-05T10:31:10+00:00,2025-02-05T11:35:03+00:00,1,0.0

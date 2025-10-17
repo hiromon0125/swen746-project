@@ -1,0 +1,384 @@
+sha,author,email,date,message
+82a973c04367123ae98bd9abdf80d9eda9b910e2,AUTOMATIC1111,16777216c@gmail.com,2024-07-27T12:49:39+00:00,changelog
+1d7e9eca098d3ae66bb1db184b88f80781891e51,AUTOMATIC1111,16777216c@gmail.com,2024-07-27T12:47:49+00:00,"Merge pull request #16275 from AUTOMATIC1111/fix-image-upscale-on-cpu
+
+fix image upscale on cpu"
+c19d04436496ab29ddca4758a792831ae41b31de,AUTOMATIC1111,16777216c@gmail.com,2024-07-27T03:53:05+00:00,Merge branch 'release_candidate'
+8b3d98c5a580c3c72e82d03fdab2b643bf9a8edd,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:54:14+00:00,update CHANGELOG
+5bbbda473fc87c161ec7f5351d78b8c43799d436,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:51:12+00:00,Merge branch 'dev' into release_candidate
+9f5a98d5766b4ac233d916fe8b02ea16b8b2c259,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:47:50+00:00,"Merge pull request #16166 from richardtallent/dev
+
+Fix noisy DS_Store files for MacOS"
+986c31dcfe701cfc84b372c7453511a320d1feb9,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:47:27+00:00,"Merge pull request #16180 from light-and-ray/do_not_send_image_size_on_paste_inpaint
+
+do not send image size on paste inpaint"
+5096c163c16b9e6c0c491bc2debc182ca048ebc5,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:46:45+00:00,"Merge pull request #16173 from AUTOMATIC1111/robust-sysinfo
+
+Robust sysinfo"
+7b99e14ab1324f93dfa78073d662a28aad949fcf,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:46:24+00:00,"Merge pull request #16194 from light-and-ray/fix_cannot_write_mode_P_as_jpeg
+
+fix OSError: cannot write mode P as JPEG"
+7c8a4ccecb59f85a015567f8ab3383145a315417,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:45:57+00:00,"Merge pull request #16202 from light-and-ray/do_not_break_progressbar_on_non-job_actions
+
+[bug] do not break progressbar on non-job actions (add wrap_gradio_call_no_job)"
+5d26c6ae89e3408c06fa2d8fcc14a3087d219efd,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:44:59+00:00,"Merge pull request #16178 from light-and-ray/update_installation_guide_linux
+
+update installation guide linux"
+5a10bb9aa6d4a46f5e14fa43648f4cb08ae1275b,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:43:39+00:00,"Merge pull request #16235 from v0xie/beta-sampling
+
+Feature: Beta scheduler"
+fa0ba939a74d1fba68f5049643e69c684de02983,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:43:03+00:00,"Merge pull request #16218 from Haoming02/resize-tabs-id
+
+add ids to the resize tabs in img2img"
+fc7b25ac673479ac3a87553ec4d251be10bb63cd,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:42:29+00:00,"Merge pull request #16231 from AUTOMATIC1111/bat-activate-venv
+
+activate venv .bat"
+e09104a126ab2620eedb7f2d12f651a4671f9152,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:41:34+00:00,"Merge pull request #16239 from AUTOMATIC1111/fix-upscale-logic
+
+fix upscale logic"
+141d4b71b1a906a8ff5f5eec1bdbc9b86f564bc4,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:40:39+00:00,"Merge pull request #16242 from AUTOMATIC1111/option-to-disable-save-button-log.csv-
+
+option to disable save button log.csv"
+ea903819cb7e1d9a1b82ff93d5be60c3d7a8c9c6,AUTOMATIC1111,16777216c@gmail.com,2024-07-20T08:39:53+00:00,"Merge pull request #16212 from AUTOMATIC1111/sd3_lora
+
+SD3 Lora support"
+24a23e1225244a5ee92acad8b96077e0af858761,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-20T06:59:28+00:00,option to disable save button log.csv
+874954060297d847bf30cc5d220effe80ac18968,v0xie,28695009+v0xie@users.noreply.github.com,2024-07-19T22:33:07+00:00,fix lint
+9de7084884f4266a19e4ed3f503687927c845c4d,v0xie,28695009+v0xie@users.noreply.github.com,2024-07-19T21:54:24+00:00,always add alpha/beta to extra_generation_params when schedule is Beta
+94275b115c2a6c3c273baa92caf0b5f4ff3cc43f,v0xie,28695009+v0xie@users.noreply.github.com,2024-07-19T21:15:55+00:00,enforce beta_dist_alpha / beta_dist_beta > 0 to avoid nan
+e285af6e4817a34c86212d1b640aad7225f0c022,v0xie,28695009+v0xie@users.noreply.github.com,2024-07-19T21:15:10+00:00,add beta schedule opts to xyz options
+f6f055a93df4fb1a59fa8f28e3b8f092fd7ba511,v0xie,28695009+v0xie@users.noreply.github.com,2024-07-19T21:08:44+00:00,use configured alpha/beta values in Beta scheduling
+3a5a66775c4c9dd03ffbf3c1696ae0db64a71793,v0xie,28695009+v0xie@users.noreply.github.com,2024-07-19T21:08:08+00:00,"add new options 'beta_dist_alpha', 'beta_dist_beta'"
+7e1bd3e3c30e1d7e95f719a925f11d9225251f7c,v0xie,28695009+v0xie@users.noreply.github.com,2024-07-19T20:44:22+00:00,refactor: syntax and add 0.0 on new line
+964fc13a99d47263d023f4e3116ac2c220acec88,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-19T19:00:54+00:00,fix upscale logic
+a5f66b5003527508c2e2c49c79360ab20071fec2,v0xie,28695009+v0xie@users.noreply.github.com,2024-07-18T22:53:54+00:00,feature: beta scheduler
+2abc628899aaddb7e28840d7f7a40d516cb5073d,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-18T14:49:49+00:00,bat activate venv
+2b50233f3ffa522d5183bacaee3411b9382cbe2c,AUTOMATIC1111,16777216c@gmail.com,2024-07-16T17:50:25+00:00,fix bugs in lora support
+f5866199c4787f905b229581a8adf765bc42da40,Haoming,hmstudy02@gmail.com,2024-07-16T03:07:22+00:00,add ids
+7e5cdaab4b386621a186999e7348f6d0af7317a7,AUTOMATIC1111,16777216c@gmail.com,2024-07-15T05:31:55+00:00,SD3 lora support
+b2453d280acd5d58e6f4f0e92b7ea5011b0a6fa4,AUTOMATIC1111,16777216c@gmail.com,2024-07-13T06:29:47+00:00,"Merge pull request #16192 from AUTOMATIC1111/patch-#16169
+
+fix #16169 Py 3.9 compatibility"
+b4d62a05af500b4367fc2f894e1f53a6e76cb035,AUTOMATIC1111,16777216c@gmail.com,2024-07-13T06:27:46+00:00,"Merge pull request #16164 from AUTOMATIC1111/sd3_textual_inversion
+
+sd3 TI support"
+589dda3cf2954beaeef65928c063e2bb5c680209,Andray,light.and.ray@gmail.com,2024-07-12T12:08:36+00:00,do not break progressbar on non-job actions
+3d2dbefcde4091ce4e6d915b3eda16ca964097f2,Andray,light.and.ray@gmail.com,2024-07-11T19:54:25+00:00,fix OSError: cannot write mode P as JPEG
+b1695c1b68f0e52cfe8dc4b9ed28228bd3710336,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-11T09:45:13+00:00,"fix #16169 Py 3.9 compatibility
+
+Co-Authored-By: SLAPaper Pang <slapaper.pku@gmail.com>"
+d57ff884edd5fe3e813dbb65adb45a8966dd15b2,Andray,light.and.ray@gmail.com,2024-07-09T12:12:39+00:00,do not send image size on paste inpaint
+26cccd8faab7ade582458611b083cd168993ade0,Andray,light.and.ray@gmail.com,2024-07-09T10:22:08+00:00,update
+9cc7142dd7c89cc0105e27ecdcf2125b43349bf3,Andray,light.and.ray@gmail.com,2024-07-09T10:07:12+00:00,update installation guide linux
+5a5fe7494ad6e4ace6b31bcb00f1e606c5755909,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T07:32:20+00:00,.gitignore sysinfo.json
+6a7042fe2fe2974b61e7f6271bd8dad3fedd9dd1,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T16:51:47+00:00,move git_status to sysinfo
+72cfa2829d9595b6c92d554035aec6e5d92a6602,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T16:30:55+00:00,safer Imports
+4debd4d3ef62449787d6d02943f82ead356bfe48,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T16:02:11+00:00,compact get_info_from_repo_path
+3f6dcda3e50594a6581bee68f482901cd9ba5d5b,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T11:33:15+00:00,Extensions info full commit hash
+27d96fa608da81b334163835fe39c1bb32984a7c,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T11:31:50+00:00,fallback Extensions info
+dd4f798b97de3e32d0a6a1a18816b4cc28c6008e,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T10:20:49+00:00,fallback get_config()
+27947a79d619eac5ce40b3f2db62d422313d12f6,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T07:56:06+00:00,git status
+11f827c58b276dff946dccf4167d8e11159eeba5,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T07:33:02+00:00,use pip freeze --all to get packages
+48dd4d9eaeaeb600bfcd27a02a4070192c55b858,AUTOMATIC1111,16777216c@gmail.com,2024-07-08T15:36:28+00:00,"Merge pull request #16170 from AUTOMATIC1111/shlex.quote-launch-args-in-console-log
+
+shlex.join launch args in console log"
+93c00b2af7f8df84b0e22deea19beea056a22025,AUTOMATIC1111,16777216c@gmail.com,2024-07-08T15:36:28+00:00,"Merge pull request #16170 from AUTOMATIC1111/shlex.quote-launch-args-in-console-log
+
+shlex.join launch args in console log"
+7d7f7f4b49cc4265b48ee08fe13b7e7b03cecf98,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T06:45:45+00:00,sysinfo handle psutil not working
+1b0823db94ab491924fd1dc57287ef9dc5bff234,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T05:51:06+00:00,shlex.join launch args in console log
+6ca7a453d40120f5a213a88e2576a9265a784573,AUTOMATIC1111,16777216c@gmail.com,2024-07-08T05:27:07+00:00,"Merge pull request #16169 from AUTOMATIC1111/py-3.9-compatibility
+
+Py 3.9 compatibility"
+bad47dcfebfe335b762119d3f33a636546ce37e1,AUTOMATIC1111,16777216c@gmail.com,2024-07-08T05:27:07+00:00,"Merge pull request #16169 from AUTOMATIC1111/py-3.9-compatibility
+
+Py 3.9 compatibility"
+c3d8b78b47dddb03bb4558d62c6eaffc167cc51b,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T05:17:51+00:00,py 3.9 compatibility
+21e72d1a5e6cac133c379cae62a4315fec81ee9d,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-08T05:07:26+00:00,py 3.9 find_vae()
+7b2917255a7d2065e7c956eb263b59b8262e97f3,Richard Tallent,richard@tallent.us,2024-07-07T16:18:17+00:00,Fix noisy DS_Store files for MacOS
+11cfe0dd054926b5df81632f9e2b2a78738ccf95,AUTOMATIC1111,16777216c@gmail.com,2024-07-07T13:36:53+00:00,sd3 TI support
+780c70f6eadc4f0d466f00fe7def2023eec3c8cf,AUTOMATIC1111,16777216c@gmail.com,2024-07-07T05:40:19+00:00,update changelog
+b5481c619583bf2e6212234ab129a46a225229c5,AUTOMATIC1111,16777216c@gmail.com,2024-07-07T05:37:58+00:00,"Merge pull request #16153 from light-and-ray/fix_ui_flashing_on_reload_and_fast_scrollong
+
+fix ui flashing on reloading and fast scrollong"
+1da490792794e135ba8f0d7b8c78ddab564d7530,AUTOMATIC1111,16777216c@gmail.com,2024-07-07T05:37:58+00:00,"Merge pull request #16153 from light-and-ray/fix_ui_flashing_on_reload_and_fast_scrollong
+
+fix ui flashing on reloading and fast scrollong"
+ec580374e54cb45cce504b9c8455a748fa1f991d,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-07-06T15:22:27+00:00,background-color: background_fill_primary
+340a9108ca800774e274b61a70517d1938b39ead,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T08:26:14+00:00,update changelog
+74069addc31e6cb24a5fb394419aef87b43a8b2c,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T08:00:22+00:00,SD2 v autodetection fix
+477869c0443c797abbee02f6c257605e2e345fb1,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:41:16+00:00,"Merge pull request #16079 from light-and-ray/fix_sd2_switching
+
+fix sd2 switching"
+ffead92d4e36a5082fa6ac5dd54c88477c9b524e,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:40:48+00:00,"Revert ""Merge pull request #16078 from huchenlei/fix_sd2""
+
+This reverts commit 4cc3add770b10cb8e8f7aa980c0d50e5b637ab2b, reversing
+changes made to 50514ce414ee4fad9aa4780ef0b97116c7d7c970."
+0a6628bad0615a640efd99937eb6d10d6d648975,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:31:08+00:00,remove mentions of specific samplers from CFG denoiser code
+eb112c6f883e00f578dcd4c034e31c80b2a3fa2e,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:18:49+00:00,"Merge pull request #16035 from v0xie/cfgpp
+
+Add new sampler DDIM CFG++"
+ace00a1fe8b1b32237559aedb299d2fa658ae5f5,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:11:33+00:00,"Merge pull request #16054 from AUTOMATIC1111/fix-Sampler-Scheduler-autocorrection-warning
+
+Fix sampler scheduler autocorrection warning"
+2fec94710bbba31b282fe123b198068aef38df21,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:06:35+00:00,"Merge pull request #16060 from xiaoxianBoy/fix-typos
+
+chore: fix typos"
+74b56fef3d37758b77d7a378d76699eb1f58162d,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:06:01+00:00,"Merge pull request #16061 from AUTOMATIC1111/remove-dont_fix_second_order_samplers_schedule
+
+remove deprecated setting dont_fix_second_order_samplers_schedule"
+8058eed6a5e0132181fd1087f16b2d969ac9d36c,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:04:26+00:00,"Merge pull request #16059 from viking1304/mac-torch-231
+
+Update torch for ARM Macs to 2.3.1"
+3bd4a08119df51cd770823ae15cc1d9826cf6ef0,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:04:06+00:00,"Merge pull request #16062 from AUTOMATIC1111/fix-infotext-Lora-hashes-fro-hires-fix-different-lora
+
+fix infotext Lora hashes fro hires fix different lora"
+68df28176c16195b7d20ffa00e0fe819877cde41,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T07:02:01+00:00,"Merge pull request #16065 from AUTOMATIC1111/ToggleLivePriview-in-image-viewer
+
+ToggleLivePriview button in image viewer"
+4cc3add770b10cb8e8f7aa980c0d50e5b637ab2b,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:59:29+00:00,"Merge pull request #16078 from huchenlei/fix_sd2
+
+Fix SD2 loading"
+50514ce414ee4fad9aa4780ef0b97116c7d7c970,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:53:03+00:00,"Merge pull request #16085 from light-and-ray/stoping_generation_extras
+
+stoping generation extras"
+edebe4d4de6ad8aa56193dadd9f8004bfcee3e63,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:52:40+00:00,"Merge pull request #16088 from cuba3/dev_cuba3
+
+Maintaining Project Compatibility for Python 3.9 Users Without Upgrade Requirements."
+b9c3f4ec2c9900630f11d6cd5237972477021ff1,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:52:14+00:00,"Merge pull request #16092 from viking1304/bash-python-version
+
+Prioritize python3.10 over python3 if both are available on Linux and Mac (with fallback)"
+41ac13996e6b68ae0ab231f3284f49b05afa62c4,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:51:44+00:00,"Merge pull request #16102 from eltociear/patch-4
+
+docs: update bug_report.yml"
+76a19c089a780798a3722c1222801b48b0d156da,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:49:34+00:00,"Merge pull request #16116 from viking1304/ensure-venv-use
+
+Ensure use of python from venv on Mac and Linux"
+372a8e0658a653df27a31a3f3493e83dc9eca3e4,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:48:53+00:00,"Merge pull request #16151 from AUTOMATIC1111/dora-fix
+
+Possible fix of wrong scale in weight decomposition"
+b8c366493420789cb0debdba479741dce6630897,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:47:15+00:00,"Merge pull request #16142 from AndreyRGW/dev
+
+Add Simple Scheduler"
+9414309f15123fd560a8b6bb3519b14ee07e01a3,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:46:57+00:00,Merge branch 'dev' into dev
+9cbde7938a002860bbcc03a49953644d344f86c6,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:44:17+00:00,"Merge pull request #16118 from AUTOMATIC1111/fix-Replace-preview
+
+fix Replace preview"
+019df53a3135f2e44668cd2996b1d7a00820e829,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:43:09+00:00,"Merge pull request #16119 from AUTOMATIC1111/defunct---max-batch-count
+
+Defunct --max-batch-count"
+af3ccee5c8f6155b9ecfb6b8c5c2b7ff6caa4d32,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:42:44+00:00,"Merge pull request #16140 from ibrahimsn98/master
+
+Return HTTP 400 instead of 404 on invalid sampler error"
+a6c384b9f733f9fea261148511492d49aa7e2bca,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:42:14+00:00,"Merge pull request #16144 from akx/bump-spandrel
+
+Bump spandrel to 0.3.4"
+b282b47b8530b487de54039b4e9c6becb3ba35a3,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:41:21+00:00,"Merge pull request #16149 from AndreyRGW/devpatch1
+
+Add Normal and DDIM Schedulers"
+c02e3a5549281be78dda0b661d12c51b2edcb46a,AUTOMATIC1111,16777216c@gmail.com,2024-07-06T06:39:01+00:00,"Merge pull request #16030 from AUTOMATIC1111/sd3
+
+Stable Diffusion 3 support"
+b82caf132274aa3cd9b087ed9dc671e8987a4686,Andray,light.and.ray@gmail.com,2024-07-05T15:28:16+00:00,fix ui flashing on reloading and fast scrollong
+bfbca310744e29d502e56c11dc212323bc9158ab,Kohaku-Blueleaf,59680068+KohakuBlueleaf@users.noreply.github.com,2024-07-05T10:56:39+00:00,"possible fix of wrong scale
+
+https://github.com/comfyanonymous/ComfyUI/pull/3922"
+f8640662c56db75d7c16fe9224ada4e2fa81981e,Andrey Efremov,50556416+AndreyRGW@users.noreply.github.com,2024-07-04T16:27:08+00:00,Add Normal and DDIM Schedulers
+f8fb74b93ab3f78dcec05e52e669b3b89b3a3b26,Aarni Koskela,akx@iki.fi,2024-07-04T05:43:48+00:00,Bump Spandrel to 0.3.4; add spandrel-extra-arches for CodeFormer
+32fdf18203cee09b558aa3e299fa4f9c0c69c8e0,Andrey Efremov,50556416+AndreyRGW@users.noreply.github.com,2024-07-03T21:56:18+00:00,Add Simple Scheduler
+3971c015624cff2de7ea74f98bf14c53797c0568,İbrahim Süren,ibrahimsn98@gmail.com,2024-07-03T14:33:25+00:00,Return http 400 instead of 404 on invalid sampler
+fd16393465847acc07ce49df51f23683d7c690ec,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-30T12:19:25+00:00,defunct --max-batch-count
+957185f7eb5a9aecea5853517f30dfe8f9c4ca58,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-30T11:01:58+00:00,"fix Replace preview
+
+fix broken Replace preview for extra networks tabs edit metadata
+caused by #11808"
+6ddcd8914ba7bead27cc72964959076b4e24fc9b,viking1304,viking1304@gmail.com,2024-06-30T09:44:06+00:00,ensure use of python from venv
+9e404c315432ca9aca2b9805e462c2360b19f5ae,AUTOMATIC1111,16777216c@gmail.com,2024-06-30T04:06:28+00:00,fix --medvram
+ebe8be9028b1a01cc21ff1c49a7fce7bd5138f1b,AUTOMATIC1111,16777216c@gmail.com,2024-06-29T05:05:55+00:00,remove AutocastLinear from SD3's MLP
+1394ecaf36da365e6bdd16ff20a4ef661e94623f,AUTOMATIC1111,16777216c@gmail.com,2024-06-29T05:05:35+00:00,do sampler calculations on CPU
+7e4b06fcd0b9b47fcc4f0a1261039358114bbacd,AUTOMATIC1111,16777216c@gmail.com,2024-06-28T21:38:52+00:00,support loading clip/t5 from the main model checkpoint
+d67348a0a54a4d4c612673d3622ef0a617036646,AUTOMATIC1111,16777216c@gmail.com,2024-06-28T15:06:49+00:00,allow generation to be started with any dimensions specified
+179ae47d642d9d28184bc0a6cacda00d67b81744,AUTOMATIC1111,16777216c@gmail.com,2024-06-28T08:15:34+00:00,fix the problem with infinite prompts where empty cond would be calculated incorrectly
+0b64633584e95e94ea2023bbe5640250f9e23984,AUTOMATIC1111,16777216c@gmail.com,2024-06-28T06:23:41+00:00,fix img2img
+0c7bdcc1b130130bdaec425a9c3537ba098e0098,AUTOMATIC1111,16777216c@gmail.com,2024-06-28T05:10:32+00:00,add the missing get_first_stage_encoding function
+fc8b126673bdfed65b2b98ee747368d35c1b42ba,AUTOMATIC1111,16777216c@gmail.com,2024-06-28T05:10:19+00:00,get T5 to work both with and without --precision half
+06fe174c74fe99093a20eba87aff2bd4e7edadf9,AUTOMATIC1111,16777216c@gmail.com,2024-06-28T04:51:30+00:00,get deepbooru to run with --precision-half
+afaf120bc2677110a8676ff183054d68393cf192,Ikko Eltociear Ashimine,eltociear@gmail.com,2024-06-27T08:44:12+00:00,"docs: update bug_report.yml
+
+occured -> occurred"
+42ca30d6c1b7dff737f49ca20409281947b0b110,AUTOMATIC1111,16777216c@gmail.com,2024-06-27T04:35:53+00:00,fix mdevram for SD1/SDXL
+d686e73daa6cca399fe68976922cabde681f69f1,AUTOMATIC1111,16777216c@gmail.com,2024-06-26T20:22:00+00:00,"support for SD3: infinite prompt length, token counting"
+ec3c31e7a19f3240bfba072787399eb02b88dc9e,viking1304,viking1304@gmail.com,2024-06-25T19:01:33+00:00,"Try to use specified python version on linux and mac, with fallback"
+9e60cdbc3f392b39143ee11b53cfec37c563682b,cuba3,cuba3@163.com,2024-06-25T07:24:46+00:00,"Maintaining Project Compatibility for Python 3.9 Users Without Upgrade Requirements.
+
+Sole usage of Python 3.10's match-case in the project hinders quick-start for beginners; consider replacing with if-else for improved accessibility."
+5d9f1e6a431fb3396ee3bb9000188941a48801f2,Andray,light.and.ray@gmail.com,2024-06-25T01:33:07+00:00,stoping generation extras
+a8fba9af35a081ada8c563fc6c76212dd131be01,AUTOMATIC1111,16777216c@gmail.com,2024-06-24T07:15:46+00:00,medvram support for SD3
+a65dd315adcab0467d652160b26a95604573530c,AUTOMATIC1111,16777216c@gmail.com,2024-06-24T06:06:10+00:00,fix T5
+731eb7277454fe16b094f54750e05d20e05a8be8,Andray,light.and.ray@gmail.com,2024-06-23T17:16:48+00:00,fix sd2 switching
+c3ef381cd8c85ff05eba7d1d1d6295bcb105137d,huchenlei,chenlei.hu@mail.utoronto.ca,2024-06-23T15:19:04+00:00,Fix SD2 loading
+775fa7696b90f0a41852fee604655d4b19de3c4a,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-21T11:26:09+00:00,ToggleLivePriview in image viewer
+109bbda70959c47d26d8a7f9e26bf61030dc162a,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-21T05:47:56+00:00,fix infotext Lora hashes fro hires fix different lora
+0f40c4b9b116a16b7e81e75a4e78b98a310e414d,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-20T11:02:59+00:00,fix Sampler Scheduler autocorrection warning
+bd85b3f19b3546ce12bcdf1c13a885f94c9e1b6c,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-21T01:53:44+00:00,remove dont_fix_second_order_samplers_schedule
+13f22974a42df9f7a491fefe2912cdf72dcbebaf,snoppy,michaleli@foxmail.com,2024-06-21T01:52:02+00:00,"chore: fix typos
+
+Signed-off-by: snoppy <michaleli@foxmail.com>"
+a772fd9804944cc19c4d6a03ccfbaa6066ce62a8,viking1304,viking1304@gmail.com,2024-06-20T21:57:59+00:00,Update torch for ARM Macs to 2.3.1
+663a4d80dfae5510257b362fd0015c8dc8b8bb5e,v0xie,28695009+v0xie@users.noreply.github.com,2024-06-17T00:47:21+00:00,add new sampler DDIM CFG++
+34b4443cc32de501d7035e5f2f171634a857e44e,AUTOMATIC1111,16777216c@gmail.com,2024-06-16T18:57:17+00:00,"add an option (on by default) to disable T5
+revert t5xxl back to fp16"
+d4b814aed609878513f5d0caf60204dda35a9e5a,AUTOMATIC1111,16777216c@gmail.com,2024-06-16T11:39:58+00:00,change t5xxl checkpoint to fp8
+58dc35a64ac3a5e172b77374c6fa3651fba5a70c,AUTOMATIC1111,16777216c@gmail.com,2024-06-16T11:31:43+00:00,change CLIP links to allow anonymous downloading
+06d0a5ab4d44728943c799030b8a218f0af4f242,AUTOMATIC1111,16777216c@gmail.com,2024-06-16T11:09:32+00:00,fix NaN issue when running without --precision half
+80f618ea95f1f833f415fc53733d45f7f3d452db,AUTOMATIC1111,16777216c@gmail.com,2024-06-16T09:52:03+00:00,add protobuf==3.20.0 to requirements
+b443fdcf7670d2a8bbd02936b0770957838f5e1d,AUTOMATIC1111,16777216c@gmail.com,2024-06-16T08:04:19+00:00,prevent accidental creation of CLIP models in float32 type when user wants float16
+7ee2114cd9c401ceb390c141e604661055e0aaf4,AUTOMATIC1111,16777216c@gmail.com,2024-06-16T05:18:05+00:00,typo
+79de09c3df95a54723dbd0676444e9e4fa6f8990,AUTOMATIC1111,16777216c@gmail.com,2024-06-16T05:13:23+00:00,linter
+5b2a60b8e2b7fb1221359047cbe9bc1f6cf0c51d,AUTOMATIC1111,16777216c@gmail.com,2024-06-16T05:04:31+00:00,initial SD3 support
+a7116aa9a11c7d7d10df81aa52ad5ec33f4b6db6,"Alex ""mcmonkey"" Goodwin",git_commits@alexgoodwin.dev,2024-06-16T04:13:57+00:00,add SD3 reference implementation from https://github.com/mcmonkey4eva/sd3-ref/
+9e0f6d2012bfdd11c0b8a4bd42e176e034c4848c,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-11T12:06:36+00:00,remove commented code
+a30b19dd5536f463222e484aef2daf466b49ee85,AUTOMATIC1111,16777216c@gmail.com,2024-06-12T05:33:28+00:00,"Merge pull request #16001 from zero41120/feat-prevent-screen-lock
+
+feat: Prevent screen sleep during generation"
+f1e0bfebfc9418f14f36ea255162ed1eaba3a62f,YSH,devtlin34@gmail.com,2024-06-12T05:33:11+00:00,ci: remove comments and console logs
+c803e11505cae54c7e8e467cd773b2053c2bfc38,YSH,devtlin34@gmail.com,2024-06-12T01:14:32+00:00,fix: prevent create multiple wake lock
+1f8f3a6e8bdbc687bc449aa3ce39bf4bb668f6f1,YSH,devtlin34@gmail.com,2024-06-11T23:50:00+00:00,feat: prevent screen sleep during generation
+d5e26274c80b65a3c67dfb6e2d99d128527467e8,AUTOMATIC1111,16777216c@gmail.com,2024-06-11T04:25:47+00:00,"Merge pull request #15992 from silveroxides/dev
+
+Add option to enable clip skip for clip L on SDXL"
+91ecc750bebcd25c5ad970a7bddc8f7603a136d7,Silver,65376327+silveroxides@users.noreply.github.com,2024-06-10T22:40:26+00:00,Update sd_hijack_clip.py
+00e09382cd85c77ac35545c7264855823dfc2eb1,Silver,ishimarukaito@gmail.com,2024-06-10T20:11:11+00:00,Add option to enable clip skip for clip L on SDXL
+123582b00f79e0ef47a7217b5fe4e1e5376722ea,AUTOMATIC1111,16777216c@gmail.com,2024-06-10T13:44:11+00:00,"Merge pull request #15988 from AUTOMATIC1111/multi-size-grid
+
+multi size grid"
+abacb735f4f20a301e11a36442950b55b19626fe,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-10T11:47:12+00:00,multi size grid
+e33bb8febeec70f11c630d9d4df3d73bd8c30330,AUTOMATIC1111,16777216c@gmail.com,2024-06-10T04:25:17+00:00,"Merge pull request #15984 from huchenlei/before_every_sampling
+
+Add process_before_every_sampling hook"
+17e846150c49395e44550e18cbe5120fcf64c173,huchenlei,chenlei.hu@mail.utoronto.ca,2024-05-28T23:35:35+00:00,Add process_before_every_sampling hook
+a84000c285775ab8ce796b236fbad9ff4aa9f0ab,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T20:23:23+00:00,"Merge pull request #15980 from AUTOMATIC1111/git-ignore-trace.json
+
+.gitignore trace.json"
+74ee8fd1e32d06a45e669dd5cce6a2bff786d3a4,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-09T19:35:11+00:00,.gitignore trace.json
+d2097dbdd99aa528d8459ad7b62d3a2230a14e65,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T18:33:32+00:00,added onOptionsAvailable callback for javascript for
+99e65ec6182c4e1201d16713f58c899bf26ba2ac,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T18:23:53+00:00,undo some changes from #15823 and fix whitespace
+1d0bb397978f67f860fd896b4cda7a6f695415ac,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T18:18:48+00:00,"Merge pull request #15823 from drhead/patch-3
+
+[Performance] Keep sigmas on CPU"
+57e6d05a43e4bdf4575e520f1a04c17e80fe58cc,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T18:18:36+00:00,added tool for profiling code
+aafbb5b403e524b94367c5893f76f834b98de26d,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T13:47:08+00:00,lint
+e368cd2810af0c7a734c33b25549110beacdf53f,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T13:46:08+00:00,stylistic changes for #15978
+981abbb1f2d04c709ec5ab88ec7afa7c957867ff,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T13:45:06+00:00,"Merge pull request #15978 from bluelovers/pr/pattern-001
+
+feat: save pattern add `basename`"
+6214aa7d2a84aa2a12962706579a2dba3470fb51,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T13:24:04+00:00,"performance: check for nans in unet only once, after all steps have been completed"
+6447ff49d335edd7dccc4b75e262615ce13e76ac,bluelovers,codelovers@users.sourceforge.net,2024-06-09T11:07:32+00:00,"feat: save pattern add `basename`
+
+`grid` or `xyz_grid` or `img`
+
+```py
+'basename': lambda self: 'img' if self.basename == '' else self.basename,
+```"
+41ee2db5a8c8ef13a631745c4eca3baef22404ab,AUTOMATIC1111,16777216c@gmail.com,2024-06-09T04:44:46+00:00,"Merge pull request #15976 from huchenlei/fix_sdxl_inpaint
+
+Fix SDXL Inpaint"
+f89b5dbbd282091fd6b3318f3ef20cf23cf9ea3a,huchenlei,chenlei.hu@mail.utoronto.ca,2024-06-09T02:15:37+00:00,nit
+d875cda565171407e1e2dc087fb5c5140359c6ec,huchenlei,chenlei.hu@mail.utoronto.ca,2024-06-09T02:11:11+00:00,Fix sdxl inpaint
+d52a1e1a22f19c941d581b92904a99d4dd7b22c1,drhead,1313496+drhead@users.noreply.github.com,2024-06-08T22:56:23+00:00,lint
+39a6d5655f6c162e2b8da024a1719d79304332a2,drhead,1313496+drhead@users.noreply.github.com,2024-06-08T22:55:07+00:00,patch k_diffusion to_d and strip device from schedulers
+428975e1d3d0ce2de7bb08052a8553a70d7746df,drhead,1313496+drhead@users.noreply.github.com,2024-06-08T22:49:44+00:00,"Merge pull request #1 from AUTOMATIC1111/dev
+
+Dev"
+58b24eae300f56882f0c38ef8c49a5211fd05a5c,drhead,1313496+drhead@users.noreply.github.com,2024-06-08T22:44:46+00:00,Merge branch 'AUTOMATIC1111:master' into patch-3
+547778b10f25def4e040b81942a2b23295567de3,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T09:41:28+00:00,possibly make NaN check cheaper
+194c2620d664c517abbd250d8b8471fedffcd64d,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T09:30:11+00:00,"Merge pull request #15968 from AUTOMATIC1111/wsl-open
+
+replace wsl-open with wslpath and explorer.exe"
+5ecfc20d97329e51ac8abf4f99b307e575bc2ece,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T09:27:54+00:00,"Merge pull request #15610 from pinanew/pinanew-patch-1
+
+AVIF has quality setting too"
+2dbc7aa6888bbab2b7f81f066fe6106ff17baabf,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T09:24:17+00:00,"Merge pull request #15627 from light-and-ray/more_extension_tag_filtering_options
+
+more extension tag filtering options"
+6d8d2723a0bf0d5f857ea50979462e64b00073b0,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T09:17:01+00:00,"Merge pull request #15632 from brendanhoar/bgh-handle-metadata-issues-more-cleanly
+
+QOL Items - handle metadata issues more cleanly for SD models, Loras and embeddings"
+3ef9f2748dbc704175eb1da8472817592b6d5dc3,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T09:16:55+00:00,Merge branch 'dev' into bgh-handle-metadata-issues-more-cleanly
+30461bef986f3d17b43dfd6197b0eebf344476b1,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T09:13:24+00:00,"Merge pull request #15602 from AUTOMATIC1111/initial-model-download-integrity
+
+Initial model download integrity"
+569f17c6c6b852a0dd09eba0387a1be5a5c12e57,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T09:10:42+00:00,"Merge pull request #15654 from huchenlei/mime
+
+Add correct mimetype for .mjs files"
+a184e5dd878c3800ecca4c64780e5af67c5d028b,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:58:05+00:00,"Merge pull request #15657 from AUTOMATIC1111/drag-text-fix
+
+Fix dragging text within prompt input"
+9e5103124a26444ee257b34b116c2167f7b65c37,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:56:53+00:00,"Merge pull request #15641 from AUTOMATIC1111/no-referrer
+
+no-referrer"
+41b24d350fd299fe7a30c2c514741e87f8852b79,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:54:55+00:00,"Merge pull request #15680 from light-and-ray/use_gradio_theme_colors_in_css
+
+use gradio theme colors in css"
+742bfbe0ec59b7af1a2da3bd03d59caf05828628,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:54:29+00:00,"Merge pull request #15679 from AUTOMATIC1111/lora-bundled-TI-infotext
+
+LoRA bundled TI infotext"
+a1130c26e5f751e96d458f01655225f3ced6337d,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:53:08+00:00,"Merge pull request #15664 from AUTOMATIC1111/fix-extra-batch-mode-P-Transparency
+
+fix extra batch mode P Transparency"
+b9dfc50a1bcf0cf165f55db089bd84d01060ddbc,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:51:48+00:00,"Merge pull request #15705 from AUTOMATIC1111/use-script_path-for-webui-root-in-launch_utils
+
+use script_path for webui root in launch_utils"
+74b1fc6256f1dde1b165c141230318e90492afa8,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:43:06+00:00,"Merge pull request #15682 from light-and-ray/two_fingers_press_to_open_context_menu
+
+two fingers press to open context menu"
+4aebfe9844f3673e7c0808721b104ac9cef5e215,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:42:27+00:00,"Merge pull request #15730 from bluelovers/patch-2
+
+Update imageviewer.js"
+debc6dddeb91a602199589c93c0e2384f541c236,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:36:21+00:00,"Merge pull request #15739 from LoganBooker/LoganBooker-AVIF-mimetype-patch
+
+Add AVIF MIME type support to mimetype definitions"
+1a7ffa2c76b0e68cd647c1f7f07235bcf85c985d,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:35:45+00:00,remove extra local variable
+64783dd9cc9de6b0230ef51bcfe5085188d62084,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:35:03+00:00,"Merge pull request #15742 from MarcusNyne/m9-240508-model-dir
+
+Added --models-dir option"
+c1c4b3fb345af72fb59cc5809bc6f10a83a19f3a,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:32:38+00:00,"Merge pull request #15738 from JLipnerPitt/JLipnerPitt-patch-1
+
+Fix AttributeError"
+5abdf5191d1c236ce6cc877434a601062927210e,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:31:26+00:00,"Merge pull request #15750 from MarcusNyne/m9-240509-pip-upgrade
+
+When creating a virtual environment, upgrade pip in webui.bat/webui.sh"
+64ebb245adb749b19fb8cdb237054af0da8dccef,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:28:06+00:00,"Merge pull request #15757 from AUTOMATIC1111/fix-fonts-with-subpath-
+
+use relative path for webui-assets css"
+07cf95c76ef052c120fbf1cfb69e3018e1cb06f8,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:26:34+00:00,update pickle safe filenames
+9905341602ba5980be418d304964156fbd85db2c,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:20:43+00:00,"Merge pull request #15783 from elf-mouse/dev
+
+chore: sync v1.8.0 packages according to changelog"
+88a5001e069c535fd8c94fcbabaf78924c80b3b5,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:20:35+00:00,Merge branch 'dev' into dev
+7b940e3879ec3bd07772d37a609dd3a81f4ba065,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:19:26+00:00,"Merge pull request #15797 from AUTOMATIC1111/fix-extention-update-when-not-on-main-branch
+
+fix extention update when not on main branch"
+b4723bb8c13be52dea31d8ae16cc8db964ed4db6,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:07:29+00:00,"Merge pull request #15815 from AUTOMATIC1111/torch-float64-or-float32
+
+fix soft inpainting on mps and xpu, torch_utils.float64"
+6450d24afe9994c631d3af2704d50ee9be55f7bc,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:06:39+00:00,"Merge pull request #15806 from huchenlei/inpaint_fix
+
+[Performance 4/6] Precompute is_sdxl_inpaint flag"
+64bf57b5ea8e60e81e6978cc97a070ab270a8d35,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T08:00:21+00:00,"Merge pull request #15817 from light-and-ray/img2img_batch_upload
+
+img2img batch upload method"
+816bc424c4e0341484deed008eea170f64469599,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T07:56:40+00:00,"Merge pull request #15816 from huchenlei/bias_backup
+
+[Performance 5/6] Prevent unnecessary extra networks bias backup"
+371cb60945e544cc9b6bbcbb54cc53ade3681dae,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T07:55:18+00:00,"Merge pull request #15830 from light-and-ray/scroll_extensions_table_on_overflow
+
+scroll extensions table on overflow"
+603509ec905a9c9ac1011e9531a9da180828fcc0,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T07:54:41+00:00,"as per wfjsw's suggestion, revert changes for sd_hijack_checkpoint.py"
+ad229fae4300fdbbc3005164ab718dae3750c3b6,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T07:52:40+00:00,"Merge pull request #15803 from huchenlei/checkpoint_false
+
+[Performance 1/6] use_checkpoint = False"
+510f025a01733f20ebe3997c1c3d159e6ac50148,w-e-w,40751091+w-e-w@users.noreply.github.com,2024-06-03T17:23:43+00:00,replace wsl-open with wslpath and explorer.exe
+5977cb0946f18b242ec4ad47c6ec286af2522948,AUTOMATIC1111,16777216c@gmail.com,2024-06-08T07:46:26+00:00,"Merge pull request #15832 from AUTOMATIC1111/xyz-csv-skipinitialspace
+
+XYZ CSV skipinitialspace"
