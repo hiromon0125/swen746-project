@@ -252,17 +252,17 @@ def merge_and_summarize(commits_df, issues_df):
     # Print summary to stdout
     print("Top 5 committers:")
     for author, count in top_committers.items():
-        print(f"{author}: {count}")
+        print(f"{author}: {count} commits")
 
     if close_rate is None:
         print("No issues to compute close rate.")
     else:
-        print(f"Issue close rate: {closed_issues}/{total_issues} = {close_rate:.2%}")
+        print(f"Issue close rate: {close_rate:.2%} ({closed_issues}/{total_issues})")
 
     if avg_open_days is None:
         print("No closed issues to compute average open duration.")
     else:
-        print(f"Average open duration (days) for closed issues: {avg_open_days:.2f}")
+        print(f"Avg. issue open duration: {avg_open_days:.2f}")
 
     return {
         "top_committers": top_committers,
