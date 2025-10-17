@@ -207,4 +207,6 @@ marimo/_lsp/
 __marimo__/
 
 .vscode
-data
+data/*
+!data/stablediff-commits.csv
+!data/stablediff-issues.csv

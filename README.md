@@ -17,7 +17,11 @@ Its a project... yea...
 repo_miner.py
 
 A command-line tool to:
-    1) Fetch and normalize commit data from GitHub
+    1) Fetch and normalize commits data from GitHub
+    2) Fetch and normalize issues data from GitHub
+    3) Summarize commits and issues that was fetched
 
 Sub-commands:
     - fetch-commits --repo [repo_name] --out [path_to_csv] --max [optional:number_of_commits]
+    - fetch-issues --repo [repo_name] --out [path_to_csv] --state [all,open,closed;default: all] --max [optional:number_of_issues]
+    - summarize --issues [path_to_csv] --commits [path_to_csv]
